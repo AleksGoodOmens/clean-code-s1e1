@@ -68,7 +68,7 @@ ul li.edit-mode label {
   color: #3a3A3a;
 }
 /* Heading */
-.heading3,
+.heading,
 label[for='new-task'] {
   color: #333;
   font-weight: 700;
@@ -108,7 +108,7 @@ label[for='new-task'] {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-	
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -151,4 +151,10 @@ ul li input[type=text] {
   display: inline-block;
   width: 224px;
 }
-
+.hidden {
+	appearance: none;
+	font-size: 0;
+	height: 0;
+	position: absolute;
+	font-size: 0;
+}
