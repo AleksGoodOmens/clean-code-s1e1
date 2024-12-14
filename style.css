@@ -6,17 +6,17 @@ body {
 }
 li, 
 h3 {
-	list-style: none;
+  list-style: none;
 }
 input,
 button{
-	outline: none;
+  outline: none;
 }
 li > * {
-	vertical-align: middle;
+  vertical-align: middle;
 }
 ul li.edit-mode label {
-	display: none;
+  display: none;
 }
 .logo {
   width: 500px;
@@ -24,16 +24,16 @@ ul li.edit-mode label {
   display: block;
   text-align: right;
 }
-.logo img {
+.logo__img {
   width: 100%;
 }
-.logo .more-inf {
+.logo__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
   .logo { 
-	  text-align: center;
+    text-align: center;
   }
 }
 .centered {
@@ -64,9 +64,20 @@ ul li.edit-mode label {
   width: 60px;
   font-family: Lato, sans-serif;
   cursor: pointer;
+  &:hover {
+    color: #3a3A3a;
+  }
 }
-.button:hover {
-  color: #3a3A3a;
+.button-delete {
+  & img {
+    height: 2em;
+    transform: rotateZ(45deg);
+    transition: transform 200ms ease-in;
+    &:hover {
+      transform: rotateZ(0);
+    }
+  }
+
 }
 /* Heading */
 .heading,
@@ -109,34 +120,22 @@ label[for='new-task'] {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &> input[type="checkbox"] {
+    margin: 0 10px;
+  }
+  &> input[type="text"] {
+    width: 226px;
+  }
 }
-
-
-.item > input[type="checkbox"] {
-  margin: 0 10px;
-}
-.item > .label {
+.item__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-.item >    input[type="text"] {
-  width: 226px;
-}
-.button.delete img {
-  height: 2em;
-  transform: rotateZ(45deg);
-  transition: transform 200ms ease-in;
-}
-.button.delete img:hover {
-  transform: rotateZ(0);
-}
-
 /* Completed */
 #completed label {
   text-decoration: line-through;
@@ -153,9 +152,9 @@ ul li input[type=text] {
   width: 224px;
 }
 .hidden {
-	appearance: none;
-	font-size: 0;
-	height: 0;
-	position: absolute;
-	font-size: 0;
+  appearance: none;
+  font-size: 0;
+  height: 0;
+  position: absolute;
+  font-size: 0;
 }
